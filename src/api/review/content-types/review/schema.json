@@ -1,0 +1,35 @@
+{
+  "kind": "collectionType",
+  "collectionName": "reviews",
+  "info": {
+    "singularName": "review",
+    "pluralName": "reviews",
+    "displayName": "review"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "review": {
+      "type": "text",
+      "required": true
+    },
+    "rating": {
+      "type": "enumeration",
+      "enum": [
+        "one",
+        "two",
+        "three",
+        "four",
+        "five"
+      ]
+    },
+    "resutaurnat": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::resutaurnat.resutaurnat",
+      "inversedBy": "reviews"
+    }
+  }
+}
